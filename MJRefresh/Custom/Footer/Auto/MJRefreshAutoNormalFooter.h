@@ -9,6 +9,9 @@
 #import "MJRefreshAutoStateFooter.h"
 
 @interface MJRefreshAutoNormalFooter : MJRefreshAutoStateFooter
+
+@property (weak, nonatomic, readonly) UIActivityIndicatorView *loadingView;
+
 /** 菊花的样式 */
 @property (assign, nonatomic) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
 @end

@@ -25,7 +25,11 @@ typedef NS_ENUM(NSInteger, MJRefreshState) {
     /** 即将刷新的状态 */
     MJRefreshStateWillRefresh,
     /** 所有数据加载完毕，没有更多的数据了 */
-    MJRefreshStateNoMoreData
+    MJRefreshStateNoMoreData,
+    /** 数据加载(操作)成功 */
+    MJRefreshStateActionSucceed,
+    /** 数据加载(操作)失败 */
+    MJRefreshStateActionFailed
 };
 
 /** 进入刷新状态的回调 */

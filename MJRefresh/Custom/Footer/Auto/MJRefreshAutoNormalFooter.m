@@ -9,7 +9,9 @@
 #import "MJRefreshAutoNormalFooter.h"
 
 @interface MJRefreshAutoNormalFooter()
-@property (weak, nonatomic) UIActivityIndicatorView *loadingView;
+{
+    __unsafe_unretained UIActivityIndicatorView *_loadingView;
+}
 @end
 
 @implementation MJRefreshAutoNormalFooter
@@ -28,7 +30,7 @@
 {
     _activityIndicatorViewStyle = activityIndicatorViewStyle;
     
-    self.loadingView = nil;
+    _loadingView = nil;
     [self setNeedsLayout];
 }
 #pragma mark - 重写父类的方法

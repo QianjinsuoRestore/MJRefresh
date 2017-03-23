@@ -104,7 +104,7 @@
     
     // 根据状态做事情
     if (state == MJRefreshStateIdle) {
-        if (oldState != MJRefreshStateRefreshing) return;
+        if (oldState != MJRefreshStateRefreshing && oldState != MJRefreshStateActionSucceed && oldState != MJRefreshStateActionFailed) return;
         
         // 保存刷新时间
         [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:self.lastUpdatedTimeKey];
